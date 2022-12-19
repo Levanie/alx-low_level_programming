@@ -1,26 +1,35 @@
 #include "main.h"
 
 /**
- * puts2 - main function.
- * @str: Pointer, the string to print.
- *
- * Description: This function prints every other character of a string
- * that is divisible by two
- * Return: none.
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
+ */
+
+int _strlen(char *s)
+{
+int len = 0;
+
+while (*s != '\0')
+{
+len++;
+s++;
+}
+
+return (len);
+}
+
+/**
+ * puts2 - prints every second character of a string, followed by a new line
+ * @str: string to print
  */
 
 void puts2(char *str)
 {
 int i;
 
-while (str[i])
-{
-if (i % 2 == 0)
-{
+for (i = 0; str[i] != '\0' && i < _strlen(str); i += 2)
 _putchar(str[i]);
-}
 
-i++;
-}
 _putchar('\n');
 }
