@@ -8,7 +8,7 @@
  * on error, -1 is returned, and errno is set apropriately.
  */
 
-void reverse_array( int *a, int n)
+void reverse_array(int *a, int n)
 {
 	int b = 0, c = 0;
 	int d[20];
